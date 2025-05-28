@@ -7,7 +7,7 @@ export async function middleware(request) {
   console.log(token);
 
   // define protected paths
-  const protectedPaths = ["/dashboard"];
+  const protectedPaths = ["/profile"];
   const isProtected = protectedPaths.some((path) => pathname.startsWith(path));
   if (!isProtected) {
     if (!token) {
@@ -25,5 +25,5 @@ export async function middleware(request) {
 
 // to specify protected routes
 export const config = {
-  matcher: ["/dashboard"],
+  matcher: ["/profile"],
 };

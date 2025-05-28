@@ -6,7 +6,7 @@ import axios from "axios";
 import { Toaster, toast } from "react-hot-toast";
 import Link from "next/link";
 
-export default function Dashboard() {
+export default function Profile() {
   const router = useRouter();
   const [isEditing, setIsEditing] = useState(false);
   const [userData, setUserData] = useState({
